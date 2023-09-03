@@ -23,6 +23,9 @@ const Product = ()=>{
                     <h3>Power History</h3>
                     <p>The Nexus Interface Unit offers a capability to display users power history</p>
                 </div>
+
+
+                
                 <div>
                 <FontAwesomeIcon icon={faShare} />
                     <h3>Share Units</h3>
