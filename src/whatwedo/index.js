@@ -7,6 +7,8 @@ import { faShare } from "@fortawesome/free-solid-svg-icons";
 import './style.css'
 
 const Product = ()=>{
+
+    
     return(
         <div>
             <h2 className="heading">What We Do</h2>
