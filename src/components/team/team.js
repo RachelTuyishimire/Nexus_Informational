@@ -1,23 +1,18 @@
 import React from 'react';
 import './style.css';
-
 const TeamMember = ({ imageSrc, name, role }) => {
   return (
-    
-    
-    <div className="card"> 
+    <div className="card">
       <img src={imageSrc} alt={name} className="member-image" />
-      <h2 className="member-name">{name}</h2> 
-      <br/>
+      <h2 className="member-name">{name}</h2>
       <p className="member-role">{role}</p>
     </div>
   );
 };
-
 const Team = () => {
   return (
     <section className="team-section">
-         <h1 className="team-title">Our Team</h1>
+      <h1 className="team-title">Our Team</h1>
       <div className="top-cards">
         <TeamMember
           imageSrc="alice.jpg"
@@ -26,7 +21,7 @@ const Team = () => {
         />
         <TeamMember
           imageSrc="elizabeth.jpg"
-          name="Elizabeth  Njoroge"
+          name="Elizabeth Njoroge"
           role="Software Developer"
         />
         <TeamMember
@@ -50,5 +45,4 @@ const Team = () => {
     </section>
   );
 };
-
 export default Team;

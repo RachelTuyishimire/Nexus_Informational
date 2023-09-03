@@ -1,28 +1,69 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #E1EBE4;
-    color: #000000;
-    font-size: 24px;
-  }
-  
-  .logo img {
-    width: 100px; 
-    height: auto;
-  }
- 
- 
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 50px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #000000;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #E1EBE4;
+  color: #000000;
+  font-size: 24px;
+}
+.logo img {
+  width: 100px;
+  height: auto;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+}
+/* Your existing CSS */
+/* New responsive styles */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+background-color: #E1EBE4;
+color: #000000;
+font-size: 24px;
+}
+.menu-icon {
+display: none;
+cursor: pointer;
+}
+.bar {
+width: 30px;
+height: 3px;
+background-color: #000;
+margin: 6px 0;
+transition: 0.4s;
+}
+.nav-links {
+list-style: none;
+display: flex;
+gap: 50px;
+}
+.nav-links a:hover {
+color: #2B39BD; /* Change to your desired blue color */
+}
+@media (max-width: 768px) {
+.menu-icon {
+  display: block;
+}
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #E1EBE4;
+}
+.nav-links.active {
+  display: flex;
+}
+}

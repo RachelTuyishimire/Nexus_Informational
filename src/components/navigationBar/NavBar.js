@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
-
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
   return (
-    <nav>
+    <nav className={`navbar ${menuOpen ? 'open' : ''}`}>
       <div className="logo">
         <img src='Group 18.png' alt="Logo" />
       </div>
-      <ul className="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">What We Do</a></li>
-        <li><a href="#">Contact Us</a></li>
+      <div className="menu-icon" onClick={toggleMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+      <ul className={`nav-links ${menuOpen ? 'active' : ''}`} onClick={closeMenu}>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a href="#we">What We Do</a></li>
+        <li><a href="#contactus">Contact Us</a></li>
       </ul>
     </nav>
   );
 }
-
 export default Navbar;
